@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url("../fonts/Pretendard-Bold.woff") format("woff"),
+    url("../fonts/Pretendard-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url("../fonts/Pretendard-Medium.woff") format("woff"),
+    url("../fonts/Pretendard-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url("../fonts/Pretendard-Regular.woff") format("woff"),
+    url("../fonts/Pretendard-Regular.woff2") format("woff2");
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #e3e3e3;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  font-family: "pretendard", sans-serif;
+  font-weight: 400;
+}
+.border_r {
+  border-radius: 5px;
+}
+#page_wrapper {
+  display: flex;
+  gap: 60px;
+  height: 100%;
+}
+#aside {
+  width: 340px;
+  height: 100vh;
+  background-color: #2c353c;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+#aside a {
+  color: #fff;
+}
+.space {
+  width: 340px;
+}
+.contents_wrapper {
+  width: 1460px;
+  background-color: black;
+  margin: 40px 0;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 16px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 30px 0 0 20px;
+}
+
+.alarm {
+  margin: 40px 0 40px 20px;
+}
+.alarm li {
+  margin-bottom: 20px;
+}
+
+.alarm li:last-child {
+  margin-bottom: 0;
+}
+.alarm a {
+  font-size: 20px;
+  font-weight: 500;
+}
+.alarm li i {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.alarm li:first-child i {
+  background: url(../images/requests_icon.png) no-repeat 100% 100% / cover;
+}
+.alarm li:nth-child(2) i {
+  background: url(../images/notifications_icon.png) no-repeat 100% 100% / cover;
+}
+.aside_top {
+  border-bottom: 1px solid #5b5b5b;
+}
+
+.aside_menu {
+  margin: 40px 0 0 0px;
+}
+
+.aside_menu > li > a {
+  font-size: 20px;
+}
+.aside_menu > li > a > i {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.aside_menu > li:nth-child(1) > a > i {
+  background: url(../images/dash_board.png) no-repeat 100% 100% / cover;
+}
+.aside_menu > li:nth-child(2) > a > i {
+  background: url(../images/lecture_icon.png) no-repeat 100% 100% / cover;
+}
+.aside_menu > li:nth-child(3) > a > i {
+  background: url(../images/coupon_icon.png) no-repeat 100% 100% / cover;
+}
+.aside_menu > li:nth-child(4) > a > i {
+  background: url(../images/notice_board_icon.png) no-repeat 100% 100% / cover;
+}
+.aside_menu li a {
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.aside_menu li a:hover span {
+  background-color: #163047;
+}
+.aside_menu li a span {
+  transition: background 0.2s;
+  display: inline-block;
+  width: 5px;
+  height: 44px;
+  margin-right: 15px;
+}
+.aside_menu li a:hover {
+  background-color: #608ab1;
+}
+
+.aside_sub_depth li {
+  position: relative;
+}
+.aside_sub_depth li span {
+}
+.arrow {
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  background: url(../images/arrow.png) no-repeat center center / cover;
+}
+
+.aside_bottom {
+  margin-top: 150px;
+  border-top: 1px solid #5b5b5b;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.aside_bottom figure {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.aside_bottom figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+.user_name_rank {
+  margin-left: 20px;
+}
+.aside_bottom i {
+  right: 20px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: url(../images/more_icon.png) no-repeat center center;
+}
+
+.aside_bottom i a {
+  display: block;
+}
+
+.user_name {
+  font-size: 20px;
+}
+.user_rank {
+  color: #a9a9a9;
+}
