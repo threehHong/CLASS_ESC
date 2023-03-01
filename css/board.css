@@ -1,3 +1,4 @@
+/* FREE BOARD */
 .contents_wrapper {
     background: #ffffff;
     border-radius: 5px;
@@ -6,17 +7,34 @@
 .contents_wrapper h2 {
     font-size: 20px;
     font-weight: bold;
-    margin: 30px 0px 79px 50px;
+    margin: 30px 0px 79px 53px;
 }
 
-.contents_wrapper table {
+/* table wrapper */
+.table_wrapper {
     width: 93%;
     margin: 0 auto;
     text-align: center;
+    border-left: 0.5px solid #A9A9A9;
+    border-right: 0.5px solid #A9A9A9;
+    border-radius: 5px;
 }
 
-.table thead tr {
+.table_wrapper table {
+    margin-bottom: 0px;
+}
+
+.table_wrapper .table thead tr {
     background: #2C353C;
     color: #ffffff;
+    line-height: 30px;
+}
+
+.table_wrapper .table tbody tr {
+    border-bottom: 1px solid #A9A9A9;
+}
+
+.table_wrapper .table tr {
+    line-height: 35px;
 }
 
