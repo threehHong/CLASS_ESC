@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class Esc</title>
 
-    <!-- 부트스트랩 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -98,52 +98,71 @@
       <div class="contents_wrapper">
         <!-- 게시판 -->
         <h2> 자유게시판 </h2>
+
+        <div class="board_edit">
+          <ul>
+            <li> 
+              <a href="#"> <i class="fa-solid fa-cloud-arrow-up"></i> 등록 </a> 
+            </li>
+            <li> 
+              <a href="#"> <i class="fa-solid fa-pencil"></i> 수정 </a> 
+            </li>
+            <li> 
+              <a href="#"> <i class="fa-regular fa-trash-can"></i> 삭제 </a> 
+            </li>
+          </ul>
+        </div>
+
         <div class="table_wrapper table-responsive">
           <table class="table table-hover">
 
-            <!-- <colgroup>
+            <colgroup>
               <col class="col1" >
               <col class="col2" >
               <col class="col3" >
               <col class="col4" >
               <col class="col5" >
               <col class="col6" >
-            </colgroup> -->
+            </colgroup>
 
             <thead>
               <tr>
-                <th scope="col"> NO </th>
+                <th scope="col" class="aab"> <input type="checkbox"> NO </th>
                 <th scope="col"> 카테고리 </th>
                 <th scope="col"> 제목 </th>
                 <th scope="col"> 작성자 </th>
+                <th scope="col"> 게시일 </th>
                 <th scope="col"> 조회수 </th>
                 <th scope="col"> 추천수 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <th scope="row"> <input type="checkbox"> 1 </th>
+                <td> 음악 </td>
+                <td> 악보를 볼줄 알아야 하나요 </td>
                 <td>@mdo</td>
-                <td>Mark</td>
-                <td>Otto</td>
+                <td> 2023-03-01 </td>
+                <td> 10 </td>
+                <td> 1 </td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
+                <th scope="row"> <input type="checkbox"> 2</th>
+                <td> 수학 </td>
+                <td> 수학 너무 어려워요 </td>
                 <td>@fat</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td> 2023-03-01 </td>
+                <td> 20 </td>
+                <td> 2 </td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
                 <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
               </tr>
             </tbody>
           </table>

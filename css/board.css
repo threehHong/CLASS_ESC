@@ -10,11 +10,31 @@
     margin: 30px 0px 79px 53px;
 }
 
+
+.contents_wrapper .board_edit ul {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    padding-right: 43px;
+}
+
+.contents_wrapper .board_edit ul li {
+    margin: 7px 10px 20px;
+}
+
+
+.contents_wrapper .board_edit ul li a {
+    color: #333333;
+}
+
+.board_edit ul li i {
+    margin-right: 5px;
+}
+
 /* table wrapper */
 .table_wrapper {
     width: 93%;
     margin: 0 auto;
-    text-align: center;
     border-left: 0.5px solid #A9A9A9;
     border-right: 0.5px solid #A9A9A9;
     border-radius: 5px;
@@ -22,6 +42,23 @@
 
 .table_wrapper table {
     margin-bottom: 0px;
+    /* text-align: center; */
+}
+
+.table_wrapper table th:not(th:nth-child(1)),
+.table_wrapper table td {
+    text-align: center;
+}
+
+.table_wrapper table .col1 {
+    width: 100px;
+}
+.table_wrapper table .col2 {
+    width: 200px;
+}
+
+.table_wrapper table input {
+    margin: 0px 15px 0px;
 }
 
 .table_wrapper .table thead tr {
@@ -37,4 +74,3 @@
 .table_wrapper .table tr {
     line-height: 35px;
 }
-
