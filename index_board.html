@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class Esc</title>
+
+    <!-- 부트스트랩 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/board.css">
+
+  
     <style>
       body {
         font-family: "pretendard", sans-serif;
@@ -86,8 +94,49 @@
     <div id="page_wrapper">
       <div class="space"></div>
       <!-- 왼쪽 여백을 위한 빈 공간 -->
+      
       <div class="contents_wrapper">
-        
+        <!-- 게시판 -->
+        <h2> 자유게시판 </h2>
+
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col"> NO </th>
+              <th scope="col"> 카테고리 </th>
+              <th scope="col"> 제목 </th>
+              <th scope="col"> 작성자 </th>
+              <th scope="col"> 조회수 </th>
+              <th scope="col"> 추천수 </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>Mark</td>
+              <td>Otto</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry the Bird</td>
+              <td>@twitter</td>
+              <td>@twitter</td>
+              <td>@twitter</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>

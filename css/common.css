@@ -63,7 +63,7 @@ body {
 }
 .contents_wrapper {
   width: 1460px;
-  background-color: black;
+  /* background-color: black; */
   margin: 40px 0;
 }
 h1 {

@@ -1,0 +1,22 @@
+.contents_wrapper {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.contents_wrapper h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0px 79px 50px;
+}
+
+.contents_wrapper table {
+    width: 93%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.table thead tr {
+    background: #2C353C;
+    color: #ffffff;
+}
+
