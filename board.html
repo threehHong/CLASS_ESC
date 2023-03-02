@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Class Esc - board </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/board.css">
+
+  
+    <style>
+      body {
+        font-family: "pretendard", sans-serif;
+        font-weight: 400;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="aside">
+      <div class="aside_top">
+        <h1 class="logo">
+          <a href="index.html"
+            ><img src="images/logo_width_w.png" alt="class_esc_logo"
+          /></a>
+        </h1>
+        <ul class="alarm">
+          <li>
+            <a href="#"><i></i><span>Requests</span></a>
+          </li>
+          <li>
+            <a href="#"><i></i><span>Notifications</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="aside_center">
+        <ul class="aside_menu">
+          <li>
+            <a href="#"><span class="txt_margin"></span><i></i>DASHBOARD</a>
+          </li>
+          <li>
+            <a href="#"><span class="txt_margin"></span><i></i>LECTURE</a>
+            <ul class="aside_sub_depth">
+              <li>
+                <a href="#"><span></span>강좌 리스트<i class="arrow"></i></a>
+              </li>
+              <li>
+                <a href="#"><span></span>강좌 개설<i class="arrow"></i></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span class="txt_margin"></span><i></i>COUPON</a>
+            <ul class="aside_sub_depth">
+              <li>
+                <a href="#"><span></span>쿠폰 생성<i class="arrow"></i></a>
+              </li>
+              <li>
+                <a href="#"><span></span>쿠폰 리스트<i class="arrow"></i></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span class="txt_margin"></span><i></i>NOTICE BOARD</a>
+            <ul class="aside_sub_depth">
+              <li>
+                <a href="#"><span></span>자유 게시판<i class="arrow"></i></a>
+              </li>
+              <li>
+                <a href="#"><span></span>공지사항<i class="arrow"></i></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="aside_bottom">
+        <figure>
+          <img src="images/profile.jpg" alt="profile_bonobono" />
+        </figure>
+        <div class="user_name_rank">
+          <p class="user_name">Jhon Doe</p>
+          <p class="user_rank">Manager</p>
+        </div>
+        <i><a href="#"></a></i>
+      </div>
+    </div>
+    <div id="page_wrapper">
+      <div class="space"> </div>
+      <!-- 왼쪽 여백을 위한 빈 공간 -->
+      
+      <div class="contents_wrapper">
+        <!-- 게시판 -->
+        <h2> 게시판 </h2>
+
+        <div class="table_search">
+          <form action="">
+            <select name="" id=""> 
+              <option value=""> 작성자 </option>
+              <option value=""> 제목 </option>
+            </select>
+            <span> <i class="fa-solid fa-angle-down"></i> </span>
+
+            <input type="text">
+            <button type="submit" class="table_search_button"> <i class="fa-solid fa-magnifying-glass"> </i> </button>
+          </form>
+        </div>
+
+        <div class="board_edit_btns">
+          <ul>
+            <li> 
+              <a href="#"> <i class="fa-solid fa-cloud-arrow-up"></i> 등록 </a> 
+            </li>
+            <li> 
+              <a href="#"> <i class="fa-solid fa-pencil"></i> 수정 </a> 
+            </li>
+            <li> 
+              <a href="#"> <i class="fa-regular fa-trash-can"></i> 삭제 </a> 
+            </li>
+          </ul>
+        </div>
+
+        <div class="table_wrapper table-responsive">
+          <table class="table table-hover">
+
+            <colgroup>
+              <col class="col1">
+              <col class="col2">
+              <col class="col3">
+              <col class="col4">
+              <col class="col5">
+              <col class="col6">
+            </colgroup>
+
+            <thead>
+              <tr>
+                <th scope="col" class="aab"> <input type="checkbox"> NO </th>
+                <th scope="col"> 
+                  <select name="" id="" class="category">
+                    <option value=""> 전체 </option>
+                    <option value=""> 공지 </option>
+                    <option value=""> 수학 </option>
+                    <option value=""> 음악 </option>
+                    <option value=""> 미술 </option>
+                  </select> 
+                </th>
+                <th scope="col"> 제목 </th>
+                <th scope="col"> 작성자 </th>
+                <th scope="col"> 게시일 </th>
+                <th scope="col"> 조회수 </th>
+                <th scope="col"> 추천수 </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 1 </th>
+                <td> 음악 </td>
+                <td> 악보를 볼줄 알아야 하나요 </td>
+                <td>@mdo</td>
+                <td> 2023-03-01 </td>
+                <td> 10 </td>
+                <td> 1 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 2</th>
+                <td> 수학 </td>
+                <td> 수학 너무 어려워요 </td>
+                <td>@fat</td>
+                <td> 2023-03-01 </td>
+                <td> 20 </td>
+                <td> 2 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+              <tr>
+                <th scope="row"> <input type="checkbox"> 300 </th>
+                <td> 미술 </td>
+                <td> 미술 도구 너무 비싸요 </td>
+                <td>@twitter</td>
+                <td> 2023-03-01 </td>
+                <td> 35 </td>
+                <td> 5 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- partial:index.partial.html -->
+        <div class="pagination">
+          <i class="fa-solid fa-angle-left"></i>
+            <ol id="numbers"> </ol>
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"> </script>
+    <script src="js/pagination.js"> </script>
+  </body>
+</html>
