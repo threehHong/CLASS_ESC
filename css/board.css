@@ -2,6 +2,8 @@
 .contents_wrapper {
     background: #ffffff;
     border-radius: 5px;
+    /* 추가한 내용 */
+    height: 830px;
 }
 
 .contents_wrapper h2 {
@@ -10,10 +12,10 @@
     margin: 30px 0px 79px 53px;
 }
 
-
 /* table_search */
 .table_search {
-    margin: 0px 50px 0px;
+    /* 추가한 내용 */
+    margin: -40px 50px 0px;
 }
 
 .table_search form {
