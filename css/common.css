@@ -40,8 +40,9 @@ body {
 }
 #page_wrapper {
   display: flex;
-  gap: 60px;
+  /* gap: 60px; */
   height: 100%;
+  justify-content: center;
 }
 #aside {
   width: 340px;
