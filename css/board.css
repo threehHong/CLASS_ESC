@@ -161,6 +161,10 @@
 	display: flex;
 }
 
+/* #numbers li {
+    margin: 0 1px;
+} */
+
 #numbers li a {
     display: inline-block;
     color: #A9A9A9;
@@ -168,9 +172,13 @@
     line-height: 40px;
 	text-decoration: none;
 	opacity: .7;
-    border-top: 1px solid #A9A9A9;
+
+    /* 추가 */
+    border: 1px solid #A9A9A9;;
+    /* margin: 0 1px; */
+    /* border-top: 1px solid #A9A9A9;
     border-left: 1px solid #A9A9A9;
-    border-bottom: 1px solid #A9A9A9;
+    border-bottom: 1px solid #A9A9A9; */
 }
 
 #numbers li a:hover {
@@ -180,7 +188,8 @@
 #numbers li a.active {
 	opacity: 1;
     background: #627F99;
-	color: #333;
+	/* color: #333; */
+    color: #A9A9A9;
 }
 
 .pagination  {
@@ -188,24 +197,24 @@
 	align-items: center;
 }
 
-.pagination .fa-angle-left {
-    border-top: 1px solid #A9A9A9;
-    border-left: 1px solid #A9A9A9;
-    border-bottom: 1px solid #A9A9A9;
-}
-.pagination .fa-angles-left {
-    margin-right: 20px;
+.pagination .fa-angle-left,
+.pagination .fa-angle-righ {
+    border: 1px solid #A9A9A9;
 }
 
-.pagination .fa-angle-right {
-    border: 1px solid #A9A9A9;;
+.pagination .fa-angles-left {
+    /* margin-right: 20px; */
 }
+
 .pagination .fa-angles-right {
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .pagination i {
     width: 40px;
     line-height: 40px;
-	color: #626262;
+	color: #A9A9A9;
+
+    /* 추가 */
+    border: 1px solid #A9A9A9;
 }

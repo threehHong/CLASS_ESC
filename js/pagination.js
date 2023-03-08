@@ -7,7 +7,7 @@ let numbers = $('#numbers');
 let prevPageBtn = $(".pagination .fa-angle-left");
 let nextPageBtn = $(".pagination .fa-angle-right");
 
-let maxPageNum = 3;
+let maxPageNum = 5;
 let pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
 
 
@@ -61,7 +61,7 @@ function displayPage(num) {
       nextPageBtn.show();
     }
   }
-  
+
   nextPageBtn.click(() => {
     ++pageActiveIdx;
     displayRow(pageActiveIdx * maxPageNum);
